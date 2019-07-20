@@ -1,0 +1,194 @@
+.product {
+	position: relative;
+	height: 481px;
+	background-repeat: no-repeat;
+	background-image: url("../../img/other/slider-photo.png");
+}
+
+.product-wrap {
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: space-between;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.product-slider {
+	position: relative;
+	top: 50px;
+	left: 55%;
+	width: 575px;
+	margin-right: 137px;
+}
+
+.product-slider input {
+	display: none;
+}
+
+.product-slider-slides {
+	width: 400%;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	transition: all 1s ease;
+}
+
+.product-slider-slides .slides {
+	width: 475px;
+	text-align: right;
+	margin-left: 100px;
+}
+
+
+.product-slider-slides .slides p:nth-child(1) {
+	font-size: 25px;
+	line-height: 30px;
+	letter-spacing: 1.5px;
+	text-transform: uppercase;
+	color: #3c3c3c;
+}
+
+.product-slider-slides .slides p:nth-child(1) span {
+	text-transform: lowercase;
+}
+
+.product-slider-slides .slides p:nth-child(2) {
+	font-size: 55px;
+	line-height: 66px;
+	font-weight: 800;
+	letter-spacing: 5.5px;
+	text-transform: uppercase;
+	color: #3c3c3c;
+}
+
+.product-slider-slides .slides p:nth-child(3) {
+	font-size: 16px;
+	line-height: 25px;
+	font-weight: 300;
+	margin-top: 12px;
+}
+
+.slider-btn {
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #fff;
+	letter-spacing: 1.4px;
+	background-color: #F4213A;
+	padding: 15px 24px;
+	margin: 43px auto 100px;
+}
+
+.slider-btn:hover {
+	box-shadow: 0 5px 7px 0 rgba(255, 0, 30, 0.3);
+}
+
+.product-slider-inner {
+	overflow-x: hidden;
+}
+
+.product-slider-controls {
+	position: absolute;
+	display: flex;
+	bottom: 0;
+	right: 0;
+	justify-content: space-between;
+	width: 86px;
+	z-index: 10;
+}
+
+.product-slider-controls label {
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+#product-btn-1:checked ~ .product-slider-controls label:nth-child(1),
+#product-btn-2:checked ~ .product-slider-controls label:nth-child(2),
+#product-btn-3:checked ~ .product-slider-controls label:nth-child(3),
+#product-btn-4:checked ~ .product-slider-controls label:nth-child(4) {
+	background-color: rgba(0, 0, 0, 1);
+}
+
+
+#product-btn-1:checked ~ .product-slider-inner .product-slider-slides {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+}
+
+#product-btn-2:checked ~ .product-slider-inner .product-slider-slides {
+	-webkit-transform: translateX(-575px);
+	transform: translateX(-575px);
+}
+
+#product-btn-3:checked ~ .product-slider-inner .product-slider-slides {
+	-webkit-transform: translateX(-1150px);
+	transform: translateX(-1150px);
+}
+
+#product-btn-4:checked ~ .product-slider-inner .product-slider-slides {
+	-webkit-transform: translateX(-1725px);
+	transform: translateX(-1725px);
+}
+
+
+@media (max-width: 1300px) {
+	.product {
+		background-image: none;
+	}
+	.product-slider {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		width: 1170px;
+		margin-right: 0;
+	}
+	.product-slider-slides .slides {
+		width: 1170px;
+		text-align: center;
+		margin-left: 0;
+	}
+	.product-slider-slides .slides p {
+		width: 95vw;
+		margin: auto;
+	}
+	.product-slider-slides .slides p:nth-child(2) {
+		font-size: 30px;
+	}
+	.product-slider-slides .slides p:nth-child(3) {
+		margin-top: 12px;
+	}
+	.product-slider-controls {
+		top: 95%;
+		bottom: 0;
+		right: 0;
+		left: 0;
+		margin: auto;
+	}
+	#product-btn-1:checked ~ .product-slider-inner .product-slider-slides {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+
+	#product-btn-2:checked ~ .product-slider-inner .product-slider-slides {
+		-webkit-transform: translateX(-1170px);
+		transform: translateX(-1170px);
+	}
+
+	#product-btn-3:checked ~ .product-slider-inner .product-slider-slides {
+		-webkit-transform: translateX(-2340px);
+		transform: translateX(-2340px);
+	}
+
+	#product-btn-4:checked ~ .product-slider-inner .product-slider-slides {
+		-webkit-transform: translateX(-3510px);
+		transform: translateX(-3510px);
+	}
+}

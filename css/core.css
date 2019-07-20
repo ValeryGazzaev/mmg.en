@@ -1,0 +1,41 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 100%;
+	min-width: 320px;
+	overflow-x: hidden;
+}
+
+.wrapper {
+	max-width: 1170px;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+.btn {
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	letter-spacing: 0.7px;
+	padding: 11px 36px;
+}
+
+.title {
+	font-size: 35px;
+	line-height: 50px;
+	letter-spacing: 0.9px;
+}
+
+body {
+	font-size: 14px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	color: #808080;
+}
+
+ul {
+	list-style: none;
+}
